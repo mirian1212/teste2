@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Cadastro do Prof.:
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar [(ngModel)]="valor" (ionChange)="filtrar()"></ion-searchbar>
+  <ion-list>
+      <ion-item *ngFor="let professor of listaFiltro">
+      <ion-label>{{ professor.nome }} <br> {{ professor.email }}</ion-label><br/>
+      <<ion-label>{{ professor.colegio }}</ion-label></b><br/>
+
+
+      <ion-button (click)="excluir(professor)"> <ion-icon name="trash"></ion-icon> </ion-button>
+      <ion-button (click)="alterar(professor)"> <ion-icon name="create"></ion-icon></ion-button>
+    </ion-item>
+  </ion-list>
+
+      <ion-button color="dark" href="home" > <ion-icon name="home"> </ion-icon> </ion-button>
+</ion-content>
