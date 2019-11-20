@@ -5,16 +5,18 @@
 </ion-header>
 
 <ion-content>
+  <ion-content>
     <ion-searchbar [(ngModel)]="valor" (ionChange)="filtrar()"></ion-searchbar>
-    <ion-list>
-      <ion-item *ngFor="let contato of listaFiltro">
-  
-        <!-- <ion-label><b>{{ motivo.nome }}</b> <br> {{ motivo.notificao }}</ion-label> <br/> -->
-  
-          <ion-button color="danger" (click)="excluir(contato)"> <ion-icon name="trash"></ion-icon> </ion-button>
-          <ion-button color="success" (click)="alterar(contato)"> <ion-icon name="create"></ion-icon></ion-button>
-      </ion-item>
-    </ion-list>
-  
+  <ion-list>
+    <ion-item *ngFor="let contato of listaFiltro">
+
+      <ion-label><b>{{ contato.nomedofilho }}</b> <br> {{ contato.ra }}</ion-label> <br/>
+
+        <ion-button color="success" href="home"> <ion-icon name="create"></ion-icon></ion-button>
+        <ion-button color="danger" (click)="excluir(contato)"> <ion-icon name="trash"></ion-icon> </ion-button>
+    </ion-item>
+  </ion-list>
+
+      <ion-button color="dark" href="home" > <ion-icon name="home"> </ion-icon> </ion-button>
 
 </ion-content>

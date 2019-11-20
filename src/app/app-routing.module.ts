@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import {NotificacoesComponent} from './contato/notificacoes/notificacoes.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
@@ -19,6 +21,7 @@ const routes: Routes = [
   { path: 'salas',loadChildren: () => import('./salas/salas.module').then( m => m.SalasPageModule)},
   { path: 'class', loadChildren: () => import('./contato/class/class.module').then( m => m.ClassPageModule) },
   { path: 'primeiro-info', loadChildren: () => import('./informatica/primeiro-info/primeiro-info.module').then( m => m.PrimeiroInfoPageModule)},
+  { path: 'notificacoes', component: NotificacoesComponent }
 ];
 
 @NgModule({

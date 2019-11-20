@@ -1,7 +1,11 @@
 export class Contato {
 key;
 nome: string;
-usuario: string;
+nomedofilho: string;
+telefone:string;
+ra: string;
+cpf: string;
+cidade: string;
 email: string;
 senha: string;
 confirmacao: string;

@@ -12,9 +12,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContatoSalvarPageModule } from './contato/contato-salvar/contato-salvar.module';
 import { ProfessorSalvarPageModule } from './professor/professor-salvar/professor-salvar.module';
 
+import {NotificacoesComponent} from './contato/notificacoes/notificacoes.component';
+
+
 
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent, NotificacoesComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,ContatoSalvarPageModule, ProfessorSalvarPageModule,
    AngularFireModule.initializeApp({
